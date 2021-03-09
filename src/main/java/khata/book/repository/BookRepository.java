@@ -1,8 +1,11 @@
 package khata.book.repository;
 
-/*
+import khata.book.model.Books;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface BookRepository extends MongoRepository<String, Integer> {
+import java.util.List;
+import java.util.UUID;
+
+public interface BookRepository extends MongoRepository<Books, Integer> {
+    List<Books> findByUserId(UUID uuid);
 }
-*/
